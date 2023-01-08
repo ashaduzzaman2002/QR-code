@@ -1,0 +1,111 @@
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: hsl(212, 45%, 89%);
+}
+
+.container {
+  width: 320px;
+  background-color: hsl(0, 0%, 100%);
+  margin: 100px auto 0;
+  border-radius: 20px;
+}
+
+.image img {
+  width: 293px;
+  margin-top: 13px;
+  border-radius: 20px;
+}
+
+.image{
+    margin-bottom: 20px;
+}
+.text-box {
+  padding: 0 25px 15px;
+  font-family: sans-serif;
+  padding-top: 20px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+p {
+  font-size: 12px;
+}
+
+.input {
+  width: 85%;
+  padding: 0 24px;
+}
+
+input {
+  width: 88%;
+  margin: auto;
+  border-radius: 25px;
+  padding: 10px 15px;
+  border: 1px solid rgb(249, 155, 24);
+  margin-bottom: 15px;
+ }
+
+ .downloadBox{
+    width: 85%;
+    padding: 0 24px;
+    padding-bottom: 25px;
+ }
+
+ input:focus{
+    outline: 1px solid rgb(249, 155, 24);
+ }
+
+.btn {
+  width: 100%;
+  border-radius: 25px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #2c7dfa;
+  background-color: rgba(249, 155, 24, 0.8);
+  color: #fff;
+  font-size: 18px;
+  margin: auto;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(249, 155, 24, 0.7);
+}
+.download {
+    width: 87%;
+  border-radius: 25px;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 18px;
+  margin: auto;
+    background-color: #2c7dfa;
+    margin-top: 15px;
+}
+
+.download:hover{
+    background-color: #277dfee3;
+}
+
+.download a {
+    font-family: sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+.clear {
+    padding-top: 10px;
+}
+
+.clear a {
+    color: #5b9af9e9;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .box {
+    margin-top: 50px;
+  }
+}

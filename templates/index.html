@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+
+    <title>QR code generator</title>
+  </head>
+  <body>
+    <div class="container">
+      {% if qr_image %}
+      <div class="image">
+        <img src="{{'static/image/qr.png'}}" alt="qr-code" />
+      </div>
+      {% else %}
+      <div class="text-box">
+        <h2>QR Code Generator</h2>
+        <p>To generate your QR code paste your URL or Text here</p>
+      </div>
+      {% endif %}
+      <div style="margin-top: 15px;">
+        <form class="input" method="post" action="/generate">
+          <div class="form_input">
+            <input type="text" name="text" placeholder="www.google.com" />
+          </div>
+          <div>
+            <button type="submit" class="btn">Generate</button>
+          </div>
+        </form>
+        <div class="downloadBox">
+          {% if qr_image %}
+          <div class="download">
+            <a href="{{ qr_image }}" download>Download</a>
+          </div>
+          <div class="clear">
+            <a href="/">Clear Image</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
