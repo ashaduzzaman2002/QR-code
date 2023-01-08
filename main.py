@@ -39,7 +39,7 @@ def generate():
 def resource_not_found(e):
     return jsonify(error=str(e))
 
-app.run(debug=True)
+app.run(debug=False, host='0.0.0.0')
 
 
 
