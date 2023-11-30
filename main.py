@@ -1,19 +1,13 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 import qrcode
-import io
-import os
 
 app = Flask(__name__, static_folder='static')
 
-
+# @route Home GET /
 @app.route('/')
 def index():
     return render_template('index.html')
 
-
-
-
-qr_image = None
 
 @app.route('/generate', methods=['POST'])
 def generate():
@@ -34,12 +28,4 @@ def generate():
     # Render the homepage template
     return render_template('index.html', qr_image = qr_image)
 
-
-@app.errorhandler(405 or 404)
-def resource_not_found(e):
-    return jsonify(error=str(e))
-
-app.run(debug=False, host='0.0.0.0')
-
-
-
+app.run(debug=True)
