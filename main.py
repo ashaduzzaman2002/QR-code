@@ -28,4 +28,5 @@ def generate():
     # Render the homepage template
     return render_template('index.html', qr_image = qr_image)
 
-app.run()
+if __name__ == '__main__':
+    app.run(debug=False)
